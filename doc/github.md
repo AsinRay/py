@@ -1,0 +1,45 @@
+Github
+================
+# Github token
+
+b070f2233203c0dcdad13a25b446fef80e5e8ee1  github token
+
+所有requests都必须带着这个访问令牌，记得必须要有token字段
+
+{"Authorization": "token b070f2233203c0dcdad13a25b446fef80e5e8ee1"}
+
+# limits :
+https://api.github.com/rate_limit
+有关抓取时ip被限问题：
+我们可以使用polipo 外加上 tor 就可以完美地处理此问题了。
+
+# api :
+
+https://api.github.com/
+
+## 1. 取指定组织的库列表
+GET /orgs/octokit/repos
+
+e.g. 取BTC项目的repos
+https://api.github.com/orgs/bitcoin/repos
+
+
+
+return value property:
+
+ "contributors_url": "https://api.github.com/repos/bitcoin/bitcoin/contributors",
+
+https://.github.com/repos/bitcoin/bips/contributors
+
+?from=2011-03-26&to=2017-11-22&type=c
+
+
+另有如下方式
+https://api.github.com/search/repositories?q=bitcoin/bitcoin
+
+
+## 2. 取指定人的follower
+e.g.  https://api.github.com/users/AsinRay/following
+
+
+https://api.github.com/users/AsinRay
